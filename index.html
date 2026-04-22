@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alpha Media | وكالة رقمية</title>
+  <meta name="description" content="Alpha Media — Solutions 360° pour moderniser votre présence digitale | حلول شاملة لتحديث تواجدكم الرقمي" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Kufi+Arabic:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <div class="logo-icon">A</div>
+        <div>
+          <div class="logo-text">Alpha <span>Media</span></div>
+          <div class="logo-sub">Digital Agency</div>
+        </div>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#services" data-fr="Services" data-ar="الخدمات">Services</a></li>
+        <li><a href="#about" data-fr="À propos" data-ar="من نحن">À propos</a></li>
+        <li><a href="#portfolio" data-fr="Portfolio" data-ar="الأعمال">Portfolio</a></li>
+        <li><a href="#contact" data-fr="Contact" data-ar="تواصل">Contact</a></li>
+        <li class="lang-btn">
+          <button id="btnFr" class="active" onclick="setLang('fr')">FR</button>
+          <button id="btnAr" onclick="setLang('ar')">AR</button>
+        </li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          <span data-fr="Agence Digitale Certifiée" data-ar="وكالة رقمية معتمدة">Agence Digitale Certifiée</span>
+        </div>
+
+        <!-- French-only hero title -->
+        <h1 class="hero-title fr-only">
+          <span class="line1">DIGITALISEZ</span>
+          <span class="line2">VOTRE BUSINESS</span>
+        </h1>
+        <!-- Arabic-only hero title -->
+        <h1 class="hero-title ar-only" style="font-family:var(--font-ar);letter-spacing:0">
+          <span class="line1">رَقْمِنْ</span>
+          <span class="line2">أَعْمَالَك</span>
+        </h1>
+
+        <p class="hero-sub">
+          <span data-fr="Solutions" data-ar="حلول">Solutions</span>
+          <span class="gold"> 360°</span>
+          <span data-fr=" pour moderniser votre présence et propulser votre marque dans l'ère numérique." data-ar=" شاملة لتحديث تواجدكم الرقمي ودفع علامتكم إلى عصر جديد."> pour moderniser votre présence et propulser votre marque dans l'ère numérique.</span>
+        </p>
+        <div class="hero-cta">
+          <a href="#services" class="btn btn-primary">
+            <i class="fas fa-rocket"></i>
+            <span data-fr="Découvrir nos services" data-ar="اكتشف خدماتنا">Découvrir nos services</span>
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-envelope"></i>
+            <span data-fr="Nous contacter" data-ar="تواصل معنا">Nous contacter</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num">200+</div>
+            <div class="stat-label" data-fr="Projets réalisés" data-ar="مشروع منجز">Projets réalisés</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">98%</div>
+            <div class="stat-label" data-fr="Clients satisfaits" data-ar="عملاء راضون">Clients satisfaits</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">5+</div>
+            <div class="stat-label" data-fr="Années d'expertise" data-ar="سنوات خبرة">Années d'expertise</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-orb">
+          <div class="orb-ring"></div>
+          <div class="orb-ring"></div>
+          <div class="orb-ring"></div>
+          <div class="orb-center"><div class="orb-inner-icon">✦</div></div>
+          <div class="hero-badge-float">
+            <div class="badge-icon">📱</div>
+            <div class="badge-text">
+              <strong data-fr="Social Media" data-ar="تواصل اجتماعي">Social Media</strong>
+              <span data-fr="Gestion pro" data-ar="إدارة احترافية">Gestion pro</span>
+            </div>
+          </div>
+          <div class="hero-badge-float">
+            <div class="badge-icon">🎬</div>
+            <div class="badge-text">
+              <strong data-fr="Vidéo Pro" data-ar="فيديو احترافي">Vidéo Pro</strong>
+              <span data-fr="Montage HD" data-ar="مونتاج عالي الجودة">Montage HD</span>
+            </div>
+          </div>
+          <div class="hero-badge-float">
+            <div class="badge-icon">🌐</div>
+            <div class="badge-text">
+              <strong data-fr="Sites Web" data-ar="مواقع ويب">Sites Web</strong>
+              <span data-fr="Sur mesure" data-ar="حسب الطلب">Sur mesure</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="glow-divider"></div>
+
+<!-- ==================== SERVICES ==================== -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="text-center">
+      <div class="section-label"><span data-fr="Nos Services" data-ar="خدماتنا">Nos Services</span></div>
+      <h2 class="section-title reveal fr-only">Ce que nous <span class="gold">faisons</span></h2>
+      <h2 class="section-title reveal ar-only">ما <span class="gold">نقدمه</span></h2>
+      <p class="section-sub reveal fr-only">Une gamme complète de solutions digitales pour booster votre présence en ligne.</p>
+      <p class="section-sub reveal ar-only">مجموعة شاملة من الحلول الرقمية لتعزيز حضوركم على الإنترنت.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <div class="service-icon">📱</div>
+        <p class="service-title fr-only">Affiches Réseaux Sociaux</p>
+        <p class="service-title ar-only">ملصقات التواصل الاجتماعي</p>
+        <p class="service-desc fr-only">Création d'affiches impactantes pour captiver votre audience sur tous les réseaux.</p>
+        <p class="service-desc ar-only">تصميم ملصقات جذابة لاستقطاب جمهوركم على جميع الشبكات.</p>
+        <a href="#contact" class="service-link">
+          <span data-fr="Demander un devis" data-ar="طلب عرض سعر">Demander un devis</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-num">02</div>
+        <div class="service-icon">📷</div>
+        <p class="service-title fr-only">Photographie & Vidéographie</p>
+        <p class="service-title ar-only">التصوير الفوتوغرافي والفيديو</p>
+        <p class="service-desc fr-only">Capturer l'essence de votre marque avec des visuels de haute qualité.</p>
+        <p class="service-desc ar-only">توثيق جوهر علامتكم التجارية بمرئيات عالية الجودة.</p>
+        <a href="#contact" class="service-link">
+          <span data-fr="Demander un devis" data-ar="طلب عرض سعر">Demander un devis</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-num">03</div>
+        <div class="service-icon">✏️</div>
+        <p class="service-title fr-only">Conception des Logo</p>
+        <p class="service-title ar-only">تصميم الشعارات</p>
+        <p class="service-desc fr-only">Identité visuelle unique qui reflète l'essence et les valeurs de votre marque.</p>
+        <p class="service-desc ar-only">هوية بصرية فريدة تعكس جوهر وقيم علامتكم التجارية.</p>
+        <a href="#contact" class="service-link">
+          <span data-fr="Demander un devis" data-ar="طلب عرض سعر">Demander un devis</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-num">04</div>
+        <div class="service-icon">🎬</div>
+        <p class="service-title fr-only">Montage Vidéo Pro</p>
+        <p class="service-title ar-only">مونتاج فيديو احترافي</p>
+        <p class="service-desc fr-only">Édition de vidéos de qualité professionnelle pour un impact maximal.</p>
+        <p class="service-desc ar-only">تعديل فيديوهات بجودة احترافية لتحقيق أقصى تأثير.</p>
+        <a href="#contact" class="service-link">
+          <span data-fr="Demander un devis" data-ar="طلب عرض سعر">Demander un devis</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-num">05</div>
+        <div class="service-icon">🤝</div>
+        <p class="service-title fr-only">Gestion de Pages RS</p>
+        <p class="service-title ar-only">إدارة صفحات التواصل</p>
+        <p class="service-desc fr-only">Engagement et croissance de votre communauté sur tous les réseaux sociaux.</p>
+        <p class="service-desc ar-only">تفاعل ونمو مجتمعكم على جميع منصات التواصل الاجتماعي.</p>
+        <a href="#contact" class="service-link">
+          <span data-fr="Demander un devis" data-ar="طلب عرض سعر">Demander un devis</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-num">06</div>
+        <div class="service-icon">🌐</div>
+        <p class="service-title fr-only">Sites Web sur Mesure</p>
+        <p class="service-title ar-only">مواقع إلكترونية مخصصة</p>
+        <p class="service-desc fr-only">Digitalisation et développement de votre espace en ligne sur mesure.</p>
+        <p class="service-desc ar-only">رقمنة وتطوير حضوركم الإلكتروني حسب الطلب.</p>
+        <a href="#contact" class="service-link">
+          <span data-fr="Demander un devis" data-ar="طلب عرض سعر">Demander un devis</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="glow-divider"></div>
+
+<!-- ==================== ABOUT ==================== -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-visual reveal">
+        <div class="about-img-wrap"><div class="big-icon">🚀</div></div>
+        <div class="about-pill">
+          <span>5+</span>
+          <span data-fr="Années d'expertise" data-ar="سنوات خبرة">Années d'expertise</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="section-label"><span data-fr="Qui sommes-nous" data-ar="من نحن">Qui sommes-nous</span></div>
+        <h2 class="section-title reveal fr-only">Une agence digitale <span class="gold">passionnée</span></h2>
+        <h2 class="section-title reveal ar-only">وكالة رقمية <span class="gold">متميزة</span></h2>
+        <p class="section-sub reveal fr-only">Nous combinons créativité, technologie et stratégie pour transformer votre présence digitale et vous propulser vers le succès.</p>
+        <p class="section-sub reveal ar-only">نجمع الإبداع والتكنولوجيا والاستراتيجية لتحويل حضوركم الرقمي ودفعكم نحو النجاح.</p>
+        <ul class="feature-list reveal">
+          <li>
+            <div class="feature-icon"><i class="fas fa-check"></i></div>
+            <div>
+              <strong data-fr="Expertise multi-services" data-ar="خبرة متعددة الخدمات">Expertise multi-services</strong>
+              <div style="font-size:0.85rem;color:var(--white-70)" data-fr="De la création graphique au développement web." data-ar="من التصميم الجرافيكي إلى تطوير الويب.">De la création graphique au développement web.</div>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon"><i class="fas fa-globe"></i></div>
+            <div>
+              <strong data-fr="Approche bilingue" data-ar="نهج ثنائي اللغة">Approche bilingue</strong>
+              <div style="font-size:0.85rem;color:var(--white-70)" data-fr="Français & Arabe pour toucher une audience plus large." data-ar="الفرنسية والعربية للوصول إلى جمهور أوسع.">Français & Arabe pour toucher une audience plus large.</div>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon"><i class="fas fa-star"></i></div>
+            <div>
+              <strong data-fr="Résultats mesurables" data-ar="نتائج قابلة للقياس">Résultats mesurables</strong>
+              <div style="font-size:0.85rem;color:var(--white-70)" data-fr="ROI optimisé et croissance de votre présence en ligne." data-ar="عائد استثمار محسّن ونمو حضوركم على الإنترنت.">ROI optimisé et croissance de votre présence en ligne.</div>
+            </div>
+          </li>
+        </ul>
+        <a href="#contact" class="btn btn-primary reveal">
+          <i class="fas fa-handshake"></i>
+          <span data-fr="Travaillons ensemble" data-ar="لنعمل معاً">Travaillons ensemble</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="glow-divider"></div>
+
+<!-- ==================== PORTFOLIO ==================== -->
+<section class="section portfolio" id="portfolio">
+  <div class="container">
+    <div class="text-center">
+      <div class="section-label"><span data-fr="Nos Réalisations" data-ar="أعمالنا">Nos Réalisations</span></div>
+      <h2 class="section-title reveal fr-only">Notre <span class="gold">Portfolio</span></h2>
+      <h2 class="section-title reveal ar-only"><span class="gold">محفظة</span> أعمالنا</h2>
+      <p class="section-sub reveal fr-only">Découvrez quelques-uns de nos projets récents pour des clients satisfaits.</p>
+      <p class="section-sub reveal ar-only">اكتشفوا بعض مشاريعنا الأخيرة لعملاء راضين.</p>
+    </div>
+    <div class="portfolio-filter reveal">
+      <button class="filter-btn active" data-filter="all"    data-fr="Tout"            data-ar="الكل">Tout</button>
+      <button class="filter-btn"        data-filter="social" data-fr="Réseaux Sociaux" data-ar="تواصل اجتماعي">Réseaux Sociaux</button>
+      <button class="filter-btn"        data-filter="logo"   data-fr="Logo & Branding" data-ar="شعارات">Logo & Branding</button>
+      <button class="filter-btn"        data-filter="video"  data-fr="Vidéo"           data-ar="فيديو">Vidéo</button>
+      <button class="filter-btn"        data-filter="web"    data-fr="Sites Web"       data-ar="مواقع ويب">Sites Web</button>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-item pi-bg-1 reveal" data-category="social">
+        <div class="portfolio-col"><span class="portfolio-tag" data-fr="Social Media" data-ar="تواصل اجتماعي">Social Media</span></div>
+        <div class="pi-icon">📱</div>
+        <div class="portfolio-overlay"><div>
+          <div style="font-weight:700"           data-fr="Campagne Instagram"             data-ar="حملة انستغرام">Campagne Instagram</div>
+          <div style="font-size:0.8rem;color:var(--white-70)" data-fr="Affiches & stories pour marque mode" data-ar="ملصقات وستوريز لعلامة أزياء">Affiches & stories pour marque mode</div>
+        </div></div>
+      </div>
+      <div class="portfolio-item pi-bg-2 reveal" data-category="logo">
+        <div class="portfolio-col"><span class="portfolio-tag" data-fr="Branding" data-ar="هوية بصرية">Branding</span></div>
+        <div class="pi-icon">✏️</div>
+        <div class="portfolio-overlay"><div>
+          <div style="font-weight:700"           data-fr="Identité Visuelle"              data-ar="هوية بصرية">Identité Visuelle</div>
+          <div style="font-size:0.8rem;color:var(--white-70)" data-fr="Logo + charte graphique complète"  data-ar="شعار + دليل الهوية البصرية الكامل">Logo + charte graphique complète</div>
+        </div></div>
+      </div>
+      <div class="portfolio-item pi-bg-3 reveal" data-category="video">
+        <div class="portfolio-col"><span class="portfolio-tag" data-fr="Vidéo" data-ar="فيديو">Vidéo</span></div>
+        <div class="pi-icon">🎬</div>
+        <div class="portfolio-overlay"><div>
+          <div style="font-weight:700"           data-fr="Spot Publicitaire"              data-ar="إعلان تجاري">Spot Publicitaire</div>
+          <div style="font-size:0.8rem;color:var(--white-70)" data-fr="Montage professionnel 30s"         data-ar="مونتاج احترافي 30 ثانية">Montage professionnel 30s</div>
+        </div></div>
+      </div>
+      <div class="portfolio-item pi-bg-1 reveal" data-category="web">
+        <div class="portfolio-col"><span class="portfolio-tag" data-fr="Site Web" data-ar="موقع ويب">Site Web</span></div>
+        <div class="pi-icon">🌐</div>
+        <div class="portfolio-overlay"><div>
+          <div style="font-weight:700"           data-fr="E-commerce"                     data-ar="متجر إلكتروني">E-commerce</div>
+          <div style="font-size:0.8rem;color:var(--white-70)" data-fr="Boutique en ligne responsive"       data-ar="متجر إلكتروني متجاوب">Boutique en ligne responsive</div>
+        </div></div>
+      </div>
+      <div class="portfolio-item pi-bg-2 reveal" data-category="logo">
+        <div class="portfolio-col"><span class="portfolio-tag" data-fr="Logo" data-ar="شعار">Logo</span></div>
+        <div class="pi-icon">⭐</div>
+        <div class="portfolio-overlay"><div>
+          <div style="font-weight:700"           data-fr="Rebranding Complet"             data-ar="إعادة بناء الهوية">Rebranding Complet</div>
+          <div style="font-size:0.8rem;color:var(--white-70)" data-fr="Nouvelle identité pour restaurant"  data-ar="هوية جديدة لمطعم">Nouvelle identité pour restaurant</div>
+        </div></div>
+      </div>
+      <div class="portfolio-item pi-bg-3 reveal" data-category="social">
+        <div class="portfolio-col"><span class="portfolio-tag" data-fr="Facebook Ads" data-ar="إعلانات فيسبوك">Facebook Ads</span></div>
+        <div class="pi-icon">📊</div>
+        <div class="portfolio-overlay"><div>
+          <div style="font-weight:700"           data-fr="Gestion Community"              data-ar="إدارة مجتمع">Gestion Community</div>
+          <div style="font-size:0.8rem;color:var(--white-70)" data-fr="+300% de croissance en 3 mois"      data-ar="+300% نمو في 3 أشهر">+300% de croissance en 3 mois</div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="glow-divider"></div>
+
+<!-- ==================== CTA ==================== -->
+<section class="cta-section">
+  <div class="container">
+    <div class="section-label" style="justify-content:center">
+      <span data-fr="Passez à l'action" data-ar="اتخذ الخطوة">Passez à l'action</span>
+    </div>
+    <h2 class="cta-title reveal fr-only">PRÊT À <span class="gold">RÉUSSIR ?</span></h2>
+    <h2 class="cta-title reveal ar-only">هل أنت <span class="gold">جاهز للنجاح؟</span></h2>
+    <p class="cta-desc reveal fr-only">Transformez votre vision en réalité digitale. Notre équipe est prête à vous accompagner à chaque étape.</p>
+    <p class="cta-desc reveal ar-only">حوّلوا رؤيتكم إلى واقع رقمي. فريقنا مستعد لمرافقتكم في كل خطوة.</p>
+    <a href="#contact" class="btn btn-primary reveal" style="font-size:1rem;padding:16px 36px">
+      <i class="fas fa-paper-plane"></i>
+      <span data-fr="CONTACTEZ-NOUS MAINTENANT" data-ar="تواصلوا معنا الآن">CONTACTEZ-NOUS MAINTENANT</span>
+    </a>
+  </div>
+</section>
+
+<div class="glow-divider"></div>
+
+<!-- ==================== CONTACT ==================== -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="text-center">
+      <div class="section-label"><span data-fr="Contact" data-ar="تواصل">Contact</span></div>
+      <h2 class="section-title reveal fr-only">Parlons de votre <span class="gold">projet</span></h2>
+      <h2 class="section-title reveal ar-only">تحدثوا معنا عن <span class="gold">مشروعكم</span></h2>
+      <p class="section-sub reveal fr-only">Remplissez le formulaire ou contactez-nous directement. Réponse sous 24h.</p>
+      <p class="section-sub reveal ar-only">أملأ النموذج أو تواصل معنا مباشرة. رد خلال 24 ساعة.</p>
+    </div>
+    <div class="contact-inner">
+      <div class="contact-info reveal">
+        <h3 data-fr="Informations de contact" data-ar="معلومات التواصل">Informations de contact</h3>
+        <div class="contact-detail">
+          <div class="cd-icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <div class="cd-label" data-fr="Téléphone" data-ar="هاتف">Téléphone</div>
+            <div class="cd-value">+216 55 984 808</div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="cd-icon"><i class="fas fa-globe"></i></div>
+          <div>
+            <div class="cd-label" data-fr="Site web" data-ar="الموقع">Site web</div>
+            <div class="cd-value">www.alphamedia.com</div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="cd-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="cd-label" data-fr="Email" data-ar="البريد">Email</div>
+            <div class="cd-value">dms.alphamedia@gmail.com</div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="cd-icon"><i class="fab fa-instagram"></i></div>
+          <div>
+            <div class="cd-label" data-fr="Réseaux sociaux" data-ar="التواصل الاجتماعي">Réseaux sociaux</div>
+            <div class="cd-value">@alphamedia_digital</div>
+          </div>
+        </div>
+        <div class="socials" style="margin-top:28px">
+          <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-tiktok"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="contact-form reveal">
+        <div class="form-row">
+          <div class="form-group">
+            <label data-fr="Nom complet *" data-ar="الاسم الكامل *">Nom complet *</label>
+            <input type="text" id="fname" placeholder="Jean Dupont" />
+          </div>
+          <div class="form-group">
+            <label data-fr="Email *" data-ar="البريد الإلكتروني *">Email *</label>
+            <input type="email" id="femail" placeholder="jean@exemple.com" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label data-fr="Service souhaité" data-ar="الخدمة المطلوبة">Service souhaité</label>
+          <select id="fservice">
+            <option value=""       data-fr="Choisir un service..."        data-ar="اختر خدمة...">Choisir un service...</option>
+            <option value="social" data-fr="Affiches Réseaux Sociaux"     data-ar="ملصقات التواصل الاجتماعي">Affiches Réseaux Sociaux</option>
+            <option value="photo"  data-fr="Photographie & Vidéographie"  data-ar="التصوير الفوتوغرافي والفيديو">Photographie & Vidéographie</option>
+            <option value="logo"   data-fr="Conception des Logo"          data-ar="تصميم الشعارات">Conception des Logo</option>
+            <option value="video"  data-fr="Montage Vidéo Pro"            data-ar="مونتاج فيديو احترافي">Montage Vidéo Pro</option>
+            <option value="gestion"data-fr="Gestion de Pages RS"          data-ar="إدارة صفحات التواصل">Gestion de Pages RS</option>
+            <option value="web"    data-fr="Site Web sur Mesure"          data-ar="موقع إلكتروني مخصص">Site Web sur Mesure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label data-fr="Message *" data-ar="الرسالة *">Message *</label>
+          <textarea id="fmessage" placeholder="Décrivez votre projet..."></textarea>
+        </div>
+        <button class="btn btn-primary" style="width:100%;justify-content:center;font-size:0.95rem" onclick="submitForm()">
+          <i class="fas fa-paper-plane"></i>
+          <span data-fr="Envoyer le message" data-ar="إرسال الرسالة">Envoyer le message</span>
+        </button>
+        <div class="success-msg" id="successMsg">
+          <i class="fas fa-check-circle"></i>
+          <span data-fr=" Message envoyé ! Nous vous répondrons sous 24h." data-ar=" تم الإرسال! سنرد عليكم خلال 24 ساعة."> Message envoyé ! Nous vous répondrons sous 24h.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <a href="#" class="logo" style="margin-bottom:16px;display:inline-flex">
+          <div class="logo-icon">A</div>
+          <div style="margin-left:12px">
+            <div class="logo-text">Alpha <span>Media</span></div>
+            <div class="logo-sub">Digital Agency</div>
+          </div>
+        </a>
+        <p class="footer-desc fr-only">Votre partenaire digital de confiance pour une présence en ligne impactante et des résultats mesurables.</p>
+        <p class="footer-desc ar-only">شريككم الرقمي الموثوق لحضور إلكتروني مؤثر ونتائج قابلة للقياس.</p>
+        <div class="socials">
+          <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-tiktok"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-fr="Services" data-ar="الخدمات">Services</h4>
+        <ul class="footer-links">
+          <li><a href="#services" data-fr="Affiches Réseaux Sociaux" data-ar="ملصقات التواصل">Affiches Réseaux Sociaux</a></li>
+          <li><a href="#services" data-fr="Photographie & Vidéo"     data-ar="التصوير والفيديو">Photographie & Vidéo</a></li>
+          <li><a href="#services" data-fr="Conception Logo"          data-ar="تصميم الشعارات">Conception Logo</a></li>
+          <li><a href="#services" data-fr="Montage Vidéo"            data-ar="مونتاج فيديو">Montage Vidéo</a></li>
+          <li><a href="#services" data-fr="Gestion Pages RS"         data-ar="إدارة التواصل">Gestion Pages RS</a></li>
+          <li><a href="#services" data-fr="Sites Web"                data-ar="مواقع ويب">Sites Web</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-fr="Navigation" data-ar="التنقل">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#home"      data-fr="Accueil"    data-ar="الرئيسية">Accueil</a></li>
+          <li><a href="#services"  data-fr="Services"   data-ar="الخدمات">Services</a></li>
+          <li><a href="#about"     data-fr="À propos"   data-ar="من نحن">À propos</a></li>
+          <li><a href="#portfolio" data-fr="Portfolio"  data-ar="الأعمال">Portfolio</a></li>
+          <li><a href="#contact"   data-fr="Contact"    data-ar="تواصل">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-fr="Contact" data-ar="تواصل">Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+216 55984808">+216 55 984 808</a></li>
+          <li><a href="mailto:dms.alphamedia@gmail.com">dms.alphamedia@gmail.com</a></li>
+          <li><a href="#">www.alphamedia.com</a></li>
+          <li><a href="#">@alphamedia_digital</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-fr="© 2025 Alpha Media. Tous droits réservés." data-ar="© 2025 Alpha Media. جميع الحقوق محفوظة.">© 2025 Alpha Media. Tous droits réservés.</p>
+      <p>
+        <a href="#" data-fr="Politique de confidentialité" data-ar="سياسة الخصوصية">Politique de confidentialité</a>
+        &nbsp;·&nbsp;
+        <a href="#" data-fr="Mentions légales" data-ar="الإشعارات القانونية">Mentions légales</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  let currentLang = 'fr';
+  const browserLang = navigator.language || navigator.userLanguage;
+  if (browserLang.startsWith('ar')) currentLang = 'ar';
+
+  function setLang(lang) {
+    currentLang = lang;
+    const isAr = lang === 'ar';
+    document.documentElement.lang = lang;
+    document.documentElement.dir = isAr ? 'rtl' : 'ltr';
+    document.body.classList.toggle('ar', isAr);
+    document.getElementById('btnFr').classList.toggle('active', !isAr);
+    document.getElementById('btnAr').classList.toggle('active',  isAr);
+
+    document.querySelectorAll('[data-fr][data-ar]').forEach(el => {
+      const val = el.getAttribute('data-' + lang);
+      if (val === null) return;
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') { el.placeholder = val; }
+      else if (el.tagName === 'OPTION') { el.textContent = val; }
+      else { el.innerHTML = val; }
+    });
+  }
+
+  setLang(currentLang);
+
+  window.addEventListener('scroll', () =>
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60));
+
+  const navToggle = document.getElementById('navToggle');
+  const navMenu   = document.getElementById('navMenu');
+  navToggle.addEventListener('click', () => navMenu.classList.toggle('open'));
+  navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navMenu.classList.remove('open')));
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.portfolio-item').forEach(item => {
+        const show = filter === 'all' || item.dataset.category === filter;
+        item.style.opacity       = show ? '1' : '0.2';
+        item.style.pointerEvents = show ? 'auto' : 'none';
+        item.style.transform     = show ? '' : 'scale(0.95)';
+      });
+    });
+  });
+
+  function submitForm() {
+    const name  = document.getElementById('fname').value.trim();
+    const email = document.getElementById('femail').value.trim();
+    const msg   = document.getElementById('fmessage').value.trim();
+    if (!name || !email || !msg) {
+      alert(currentLang === 'ar' ? 'يرجى ملء جميع الحقول المطلوبة.' : 'Veuillez remplir tous les champs obligatoires.');
+      return;
+    }
+    const s = document.getElementById('successMsg');
+    s.classList.add('show');
+    ['fname','femail','fmessage'].forEach(id => document.getElementById(id).value = '');
+    setTimeout(() => s.classList.remove('show'), 5000);
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+
+  function animateCounters() {
+    document.querySelectorAll('.stat-num').forEach(el => {
+      const target = parseInt(el.textContent);
+      if (isNaN(target)) return;
+      const suffix = el.textContent.replace(/[0-9]/g, '');
+      let n = 0;
+      const timer = setInterval(() => {
+        n += Math.ceil(target / 60);
+        if (n >= target) { el.textContent = target + suffix; clearInterval(timer); }
+        else el.textContent = n + suffix;
+      }, 1800 / target);
+    });
+  }
+  const ctrObserver = new IntersectionObserver(([e]) => {
+    if (e.isIntersecting) { animateCounters(); ctrObserver.disconnect(); }
+  }, { threshold: 0.5 });
+  const statsEl = document.querySelector('.hero-stats');
+  if (statsEl) ctrObserver.observe(statsEl);
+</script>
+</body>
+</html>
