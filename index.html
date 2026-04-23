@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Kufi+Arabic:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" type="image/svg+xml" href="Assets/favicon.svg" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -17,11 +18,7 @@
   <div class="container">
     <div class="nav-inner">
       <a href="#" class="logo">
-        <div class="logo-icon">A</div>
-        <div>
-          <div class="logo-text">Alpha <span>Media</span></div>
-          <div class="logo-sub">Digital Agency</div>
-        </div>
+        <img src="Assets/logo.png" alt="Alpha Media" class="logo-img" />
       </a>
       <ul class="nav-menu" id="navMenu">
         <li><a href="#services" data-fr="Services" data-ar="الخدمات">Services</a></li>
@@ -380,7 +377,7 @@
           <div class="cd-icon"><i class="fas fa-phone"></i></div>
           <div>
             <div class="cd-label" data-fr="Téléphone" data-ar="هاتف">Téléphone</div>
-            <div class="cd-value">+216 55 984 808</div>
+            <div class="cd-value">+33 6 12 34 56 78</div>
           </div>
         </div>
         <div class="contact-detail">
@@ -394,7 +391,7 @@
           <div class="cd-icon"><i class="fas fa-envelope"></i></div>
           <div>
             <div class="cd-label" data-fr="Email" data-ar="البريد">Email</div>
-            <div class="cd-value">dms.alphamedia@gmail.com</div>
+            <div class="cd-value">contact@alphamedia.com</div>
           </div>
         </div>
         <div class="contact-detail">
@@ -417,11 +414,11 @@
         <div class="form-row">
           <div class="form-group">
             <label data-fr="Nom complet *" data-ar="الاسم الكامل *">Nom complet *</label>
-            <input type="text" id="fname" placeholder="Jean Dupont" />
+            <input type="text" id="fname" placeholder="Nom et Prénom" />
           </div>
           <div class="form-group">
             <label data-fr="Email *" data-ar="البريد الإلكتروني *">Email *</label>
-            <input type="email" id="femail" placeholder="jean@exemple.com" />
+            <input type="email" id="femail" placeholder="email@exemple.com" />
           </div>
         </div>
         <div class="form-group">
@@ -440,13 +437,19 @@
           <label data-fr="Message *" data-ar="الرسالة *">Message *</label>
           <textarea id="fmessage" placeholder="Décrivez votre projet..."></textarea>
         </div>
-        <button class="btn btn-primary" style="width:100%;justify-content:center;font-size:0.95rem" onclick="submitForm()">
-          <i class="fas fa-paper-plane"></i>
-          <span data-fr="Envoyer le message" data-ar="إرسال الرسالة">Envoyer le message</span>
+        <button id="submitBtn" class="btn btn-primary" style="width:100%;justify-content:center;font-size:0.95rem" onclick="submitForm()">
+          <span id="submitBtnText">
+            <i class="fas fa-paper-plane"></i>
+            <span data-fr="Envoyer le message" data-ar="إرسال الرسالة">Envoyer le message</span>
+          </span>
         </button>
         <div class="success-msg" id="successMsg">
           <i class="fas fa-check-circle"></i>
           <span data-fr=" Message envoyé ! Nous vous répondrons sous 24h." data-ar=" تم الإرسال! سنرد عليكم خلال 24 ساعة."> Message envoyé ! Nous vous répondrons sous 24h.</span>
+        </div>
+        <div class="error-msg" id="errorMsg">
+          <i class="fas fa-exclamation-circle"></i>
+          <span data-fr=" Une erreur est survenue. Veuillez réessayer." data-ar=" حدث خطأ. يرجى المحاولة مرة أخرى."> Une erreur est survenue. Veuillez réessayer.</span>
         </div>
       </div>
     </div>
@@ -459,11 +462,7 @@
     <div class="footer-cols">
       <div class="footer-col">
         <a href="#" class="logo" style="margin-bottom:16px;display:inline-flex">
-          <div class="logo-icon">A</div>
-          <div style="margin-left:12px">
-            <div class="logo-text">Alpha <span>Media</span></div>
-            <div class="logo-sub">Digital Agency</div>
-          </div>
+          <img src="Assets/logo.png" alt="Alpha Media" class="logo-img logo-img--footer" />
         </a>
         <p class="footer-desc fr-only">Votre partenaire digital de confiance pour une présence en ligne impactante et des résultats mesurables.</p>
         <p class="footer-desc ar-only">شريككم الرقمي الموثوق لحضور إلكتروني مؤثر ونتائج قابلة للقياس.</p>
@@ -498,9 +497,9 @@
       <div class="footer-col">
         <h4 data-fr="Contact" data-ar="تواصل">Contact</h4>
         <ul class="footer-links">
-          <li><a href="tel:+216 55984808">+216 55 984 808</a></li>
+          <li><a href="tel:+33612345678">+33 6 12 34 56 78</a></li>
           <li><a href="mailto:dms.alphamedia@gmail.com">dms.alphamedia@gmail.com</a></li>
-          <li><a href="#">www.alphamedia.com</a></li>
+          <li><a href="#">Alphamedia-tn.netlify.app</a></li>
           <li><a href="#">@alphamedia_digital</a></li>
         </ul>
       </div>
@@ -573,18 +572,68 @@
     });
   });
 
-  function submitForm() {
-    const name  = document.getElementById('fname').value.trim();
-    const email = document.getElementById('femail').value.trim();
-    const msg   = document.getElementById('fmessage').value.trim();
+  // ── Formspree endpoint ──────────────────────────────────────────
+  // Replace YOUR_FORM_ID with the ID from formspree.io (e.g. "xyzabcde")
+  const FORMSPREE_ID = 'YOUR_FORM_ID';
+  // ────────────────────────────────────────────────────────────────
+
+  async function submitForm() {
+    const name    = document.getElementById('fname').value.trim();
+    const email   = document.getElementById('femail').value.trim();
+    const service = document.getElementById('fservice').value;
+    const msg     = document.getElementById('fmessage').value.trim();
+
     if (!name || !email || !msg) {
-      alert(currentLang === 'ar' ? 'يرجى ملء جميع الحقول المطلوبة.' : 'Veuillez remplir tous les champs obligatoires.');
+      alert(currentLang === 'ar'
+        ? 'يرجى ملء جميع الحقول المطلوبة.'
+        : 'Veuillez remplir tous les champs obligatoires.');
       return;
     }
-    const s = document.getElementById('successMsg');
-    s.classList.add('show');
-    ['fname','femail','fmessage'].forEach(id => document.getElementById(id).value = '');
-    setTimeout(() => s.classList.remove('show'), 5000);
+
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText   = document.getElementById('submitBtnText');
+    const successEl = document.getElementById('successMsg');
+    const errorEl   = document.getElementById('errorMsg');
+
+    // Loading state
+    submitBtn.disabled = true;
+    btnText.innerHTML  = currentLang === 'ar'
+      ? '<i class="fas fa-spinner fa-spin"></i> جارٍ الإرسال...'
+      : '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+    errorEl.classList.remove('show');
+
+    try {
+      const res = await fetch(`https://formspree.io/f/xjgjpaey`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          name,
+          email,
+          service: service || '—',
+          message: msg,
+          _subject: `Nouveau message Alpha Media — ${name}`
+        })
+      });
+
+      if (res.ok) {
+        successEl.classList.add('show');
+        ['fname','femail','fmessage'].forEach(id => document.getElementById(id).value = '');
+        document.getElementById('fservice').value = '';
+        setTimeout(() => successEl.classList.remove('show'), 6000);
+      } else {
+        const data = await res.json();
+        throw new Error(data?.errors?.[0]?.message || 'Server error');
+      }
+    } catch (err) {
+      errorEl.classList.add('show');
+      setTimeout(() => errorEl.classList.remove('show'), 6000);
+      console.error('Form error:', err);
+    } finally {
+      submitBtn.disabled = false;
+      btnText.innerHTML  = currentLang === 'ar'
+        ? '<i class="fas fa-paper-plane"></i> إرسال الرسالة'
+        : '<i class="fas fa-paper-plane"></i> Envoyer le message';
+    }
   }
 
   document.querySelectorAll('a[href^="#"]').forEach(a => {

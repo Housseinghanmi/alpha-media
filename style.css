@@ -125,31 +125,24 @@ body.ar .section-title { font-family: var(--font-ar); }
 .nav-inner {
   display: flex; align-items: center; justify-content: space-between;
 }
+/* Logo image */
+.logo-img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  /* the PNG has a dark background — filter makes it crisp on our dark navy */
+  filter: brightness(1.08) contrast(1.05);
+  transition: var(--transition);
+}
+.logo-img:hover { opacity: 0.85; }
+.logo-img--footer {
+  height: 44px;
+  margin-bottom: 4px;
+}
+
 .logo {
   display: flex; align-items: center; gap: 12px; text-decoration: none;
-}
-.logo-icon {
-  width: 44px; height: 44px; border-radius: 12px;
-  background: linear-gradient(135deg, var(--gold) 0%, #e09f10 100%);
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-latin); font-weight: 800; font-size: 20px;
-  color: var(--navy); position: relative;
-  box-shadow: var(--glow-gold);
-}
-.logo-icon::after {
-  content: '✏';
-  position: absolute; bottom: -4px; right: -4px;
-  font-size: 12px; background: var(--navy); border-radius: 50%;
-  padding: 2px;
-}
-.logo-text {
-  font-family: var(--font-latin); font-weight: 800; font-size: 1.15rem;
-  color: var(--white); line-height: 1.2; letter-spacing: -0.3px;
-}
-.logo-text span { color: var(--gold); }
-.logo-sub {
-  font-size: 9px; letter-spacing: 2px; color: var(--white-70);
-  text-transform: uppercase;
 }
 
 .nav-menu {
@@ -600,13 +593,25 @@ body.ar .footer-links a:hover { padding-left: 0; padding-right: 6px; }
   margin: 0;
 }
 
-/* ==================== SUCCESS MSG ==================== */
-.success-msg {
-  display: none; background: rgba(245,200,66,0.1); border: 1px solid rgba(245,200,66,0.4);
-  border-radius: 12px; padding: 18px 24px; text-align: center; color: var(--gold);
-  font-weight: 600; margin-top: 16px;
+/* ==================== SUCCESS / ERROR MSGS ==================== */
+.success-msg,
+.error-msg {
+  display: none; border-radius: 12px; padding: 18px 24px;
+  text-align: center; font-weight: 600; margin-top: 16px;
 }
-.success-msg.show { display: block; animation: fadeUp 0.5s ease; }
+.success-msg {
+  background: rgba(245,200,66,0.1); border: 1px solid rgba(245,200,66,0.4);
+  color: var(--gold);
+}
+.error-msg {
+  background: rgba(220,60,60,0.1); border: 1px solid rgba(220,60,60,0.35);
+  color: #f87272;
+}
+.success-msg.show,
+.error-msg.show { display: block; animation: fadeUp 0.5s ease; }
+
+/* Disabled button state */
+button:disabled { opacity: 0.65; cursor: not-allowed; transform: none !important; }
 
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 900px) {
